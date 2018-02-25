@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.animation {
+    @extend .centerContent;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+
+    .knife_wrapper {
+        position: relative;
+        width: 50vw;
+        height: 50vh;
+        overflow: hidden;
+
+        .knife {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 0 0 100px black;
+            background-image: url('../resources/images/knife.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: knifeRotate 1s infinite alternate;        
+        }
+        .room {
+            width: 100%;
+            height: 200%;
+            opacity: 0.2;
+            position: absolute;
+            left: -20%;
+            background-image: url('../resources/images/knife_view.jpg');
+            animation: knifeMirror 1s infinite alternate;
+        }
+    }
+    .bbq_wrapper {
+        position: relative;
+        width: 50vw;
+        height: 50vh;
+        overflow: hidden;
+        color: white;
+        .bbq {
+            width: 100%;
+            height: 100%;
+            background-image: url('../resources/images/bbq.png');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: knifeRotate 1s infinite alternate; 
+        }
+    }
+}
+
+@keyframes knifeRotate {
+    from {
+        transform: rotateX(0) rotateY(0);
+    }
+    to {
+        transform: rotateX(20deg) rotateY(5deg);
+    }
+}
+
+@keyframes knifeMirror {
+    from {
+        transform: rotateZ(25deg) translateX(25px) translateY(-100%);
+    }
+    to {
+        transform: rotateZ(25deg) translateX(25px) translateY(0%);
+    }
+}
+
+
+
+
+
+
+
+
+.centerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
