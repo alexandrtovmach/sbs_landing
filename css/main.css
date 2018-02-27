@@ -1,147 +1,131 @@
-body {
-  margin: 0; }
+.knife_wrapper {
+  position: relative;
+  overflow: hidden; }
+  .knife_wrapper .knife {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 0 100px black;
+    background-image: url("../resources/images/knife.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: knifeRotate 1s infinite alternate; }
+  .knife_wrapper .room {
+    width: 100%;
+    height: 200%;
+    opacity: 0.2;
+    position: absolute;
+    left: -20%;
+    background-image: url("../resources/images/knife_view.jpg");
+    animation: knifeMirror 1s infinite alternate; }
 
-.hide {
-  display: none; }
+.bbq_wrapper {
+  position: relative;
+  overflow: hidden;
+  color: white; }
+  .bbq_wrapper .bbq {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url("../resources/images/bbq.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .bbq_wrapper .bbq .smoke_wrapper {
+      width: 97%;
+      height: 73%;
+      overflow: hidden; }
+      .bbq_wrapper .bbq .smoke_wrapper .smoke {
+        width: 10%;
+        height: 1000%;
+        float: right;
+        padding-right: 4%;
+        background-image: url("../resources/images/smoke.png");
+        background-size: 100% auto;
+        animation: smoke 50s infinite linear;
+        opacity: 0;
+        transition: 1s; }
+        .bbq_wrapper .bbq .smoke_wrapper .smoke:hover {
+          opacity: 1; }
 
-.animation {
-  width: 100%;
-  height: 100vh;
-  background-color: black; }
-  .animation .knife_wrapper {
-    position: relative;
-    width: 50vw;
-    height: 50vh;
-    overflow: hidden; }
-    .animation .knife_wrapper .knife {
-      width: 100%;
-      height: 100%;
-      box-shadow: 0 0 0 100px black;
-      background-image: url("../resources/images/knife.png");
-      background-size: 100% 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: knifeRotate 1s infinite alternate; }
-    .animation .knife_wrapper .room {
-      width: 100%;
-      height: 200%;
-      opacity: 0.2;
-      position: absolute;
-      left: -20%;
-      background-image: url("../resources/images/knife_view.jpg");
-      animation: knifeMirror 1s infinite alternate; }
-  .animation .bbq_wrapper {
-    position: relative;
-    width: 40vw;
-    height: 50vh;
-    overflow: hidden;
-    color: white; }
-    .animation .bbq_wrapper .bbq {
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      position: absolute;
-      background-image: url("../resources/images/bbq.png");
-      background-size: 100% 100%;
-      background-position: center;
-      background-repeat: no-repeat; }
-      .animation .bbq_wrapper .bbq .smoke_wrapper {
-        width: 97%;
-        height: 73%;
-        overflow: hidden; }
-        .animation .bbq_wrapper .bbq .smoke_wrapper .smoke {
-          width: 10%;
-          height: 1000%;
-          float: right;
-          padding-right: 4%;
-          background-image: url("../resources/images/smoke.png");
-          background-size: 100% auto;
-          animation: smoke 50s infinite linear;
-          opacity: 0;
-          transition: 1s; }
-          .animation .bbq_wrapper .bbq .smoke_wrapper .smoke:hover {
-            opacity: 1; }
-  .animation .stick_wrapper {
-    position: relative;
-    width: 50vw;
-    height: 50vh;
-    overflow: hidden;
-    color: white; }
-    .animation .stick_wrapper .stick {
-      width: auto;
-      height: 100%; }
-      .animation .stick_wrapper .stick.bluestick {
-        animation: stickRotateLeft 1s infinite alternate; }
-      .animation .stick_wrapper .stick.pinkstick {
-        animation: stickRotateRight 1s infinite alternate; }
-  .animation .whiskey_wrapper {
-    position: relative;
-    width: 50vw;
-    height: 80vh;
-    overflow: hidden;
-    color: white; }
-    .animation .whiskey_wrapper .icecube {
-      width: auto;
-      height: 15%;
-      display: block;
-      margin: auto; }
-      .animation .whiskey_wrapper .icecube:nth-child(1) {
-        animation: fallIceCubeLeft 3s infinite ease-in alternate; }
-      .animation .whiskey_wrapper .icecube:nth-child(2) {
-        animation: fallIceCubeRight 3s infinite ease-in alternate; }
-    .animation .whiskey_wrapper .glass {
-      width: 100%;
-      height: 60%;
-      background-size: auto 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: glassSpil 3s infinite alternate; }
-  .animation .plate_wrapper {
-    position: relative;
-    width: 90vh;
-    height: 50vh;
-    overflow: hidden;
-    color: white; }
-    .animation .plate_wrapper .plate_crash_wrapper {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      animation: crashPlate 1s infinite ease-out alternate; }
-      .animation .plate_wrapper .plate_crash_wrapper .platecrash {
-        position: absolute; }
-        .animation .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(1) {
-          width: 26%;
-          height: auto;
-          top: 7%;
-          left: 26%; }
-        .animation .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(2) {
-          width: 22%;
-          height: auto;
-          top: 16%;
-          left: 38%; }
-        .animation .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(3) {
-          width: 20%;
-          height: auto;
-          top: 48%;
-          left: 37%; }
-        .animation .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(4) {
-          width: 36%;
-          height: auto;
-          top: 49%;
-          left: 18%; }
-        .animation .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(5) {
-          width: 20%;
-          height: auto;
-          top: 15%;
-          left: 17%; }
-    .animation .plate_wrapper .plate {
-      width: auto;
-      height: 100%;
-      background-size: auto 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      animation: flyPlate 1s infinite ease-out alternate; }
+.stick_wrapper {
+  position: relative;
+  overflow: hidden;
+  color: white; }
+  .stick_wrapper .stick {
+    width: auto;
+    height: 100%; }
+    .stick_wrapper .stick.bluestick {
+      animation: stickRotateLeft 1s infinite alternate; }
+    .stick_wrapper .stick.pinkstick {
+      animation: stickRotateRight 1s infinite alternate; }
+
+.whiskey_wrapper {
+  position: relative;
+  overflow: hidden;
+  color: white; }
+  .whiskey_wrapper .icecube {
+    width: auto;
+    height: 15%;
+    display: block;
+    margin: auto; }
+    .whiskey_wrapper .icecube:nth-child(1) {
+      animation: fallIceCubeLeft 3s infinite ease-in alternate; }
+    .whiskey_wrapper .icecube:nth-child(2) {
+      animation: fallIceCubeRight 3s infinite ease-in alternate; }
+  .whiskey_wrapper .glass {
+    width: 100%;
+    height: 60%;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: glassSpil 3s infinite alternate; }
+
+.plate_wrapper {
+  position: relative;
+  overflow: hidden;
+  color: white; }
+  .plate_wrapper .plate_crash_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: crashPlate 1s linear forwards; }
+    .plate_wrapper .plate_crash_wrapper .platecrash {
+      position: absolute; }
+      .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(1) {
+        width: 26%;
+        height: auto;
+        top: 7%;
+        left: 26%; }
+      .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(2) {
+        width: 22%;
+        height: auto;
+        top: 16%;
+        left: 38%; }
+      .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(3) {
+        width: 20%;
+        height: auto;
+        top: 48%;
+        left: 37%; }
+      .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(4) {
+        width: 36%;
+        height: auto;
+        top: 49%;
+        left: 18%; }
+      .plate_wrapper .plate_crash_wrapper .platecrash:nth-child(5) {
+        width: 20%;
+        height: auto;
+        top: 15%;
+        left: 17%; }
+  .plate_wrapper .plate {
+    width: auto;
+    height: 100%;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: flyPlate 1s linear forwards; }
 
 @keyframes knifeRotate {
   from {
@@ -153,13 +137,13 @@ body {
   from {
     transform: rotateZ(0); }
   to {
-    transform: rotateZ(50deg); } }
+    transform: rotateZ(70deg); } }
 
 @keyframes stickRotateRight {
   from {
     transform: rotateZ(0); }
   to {
-    transform: rotateZ(-50deg); } }
+    transform: rotateZ(-70deg); } }
 
 @keyframes fallIceCubeLeft {
   0% {
@@ -203,9 +187,9 @@ body {
   0% {
     transform: translateX(50%) scale(1);
     opacity: 1; }
-  75% {
+  55% {
     opacity: 1; }
-  80% {
+  60% {
     transform: translateX(20%) translateY(-5%) scale(0.77);
     opacity: 0; }
   100% {
@@ -215,20 +199,114 @@ body {
 @keyframes crashPlate {
   0% {
     opacity: 0; }
-  74% {
+  54% {
     opacity: 0; }
-  80% {
+  60% {
     width: 100%;
     height: 100%;
     margin: 0;
+    opacity: 1; }
+  90% {
     opacity: 1; }
   100% {
     width: 105%;
     height: 120%;
     margin: -5% 0 0 -2.5%;
-    opacity: 1; } }
+    opacity: 0; } }
+
+body {
+  margin: 0;
+  background-color: #222; }
+
+.hide {
+  display: none; }
 
 .centerContent {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+.main_wrapper {
+  margin: auto;
+  width: 60%;
+  box-shadow: 0 0 20px 5px black;
+  background-image: url("../resources/images/bg_desk.jpg");
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  overflow: hidden;
+  color: white; }
+  .main_wrapper h1, .main_wrapper h2, .main_wrapper h3 {
+    font-family: sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.3em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center; }
+  .main_wrapper h2 {
+    font-size: 1.5em; }
+  .main_wrapper p {
+    font-family: sans; }
+  .main_wrapper section {
+    padding: 5vh 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    .main_wrapper section .delim {
+      width: 100%;
+      height: 2vh;
+      background-image: url("../resources/images/delimiter.jpg");
+      background-size: auto 100%; }
+    .main_wrapper section .delimiter_image {
+      width: 100%;
+      height: 50%; }
+    .main_wrapper section:nth-child(2) {
+      background-color: black;
+      box-shadow: 0 0 20px 2px black; }
+      .main_wrapper section:nth-child(2) h2 {
+        width: 50%; }
+      .main_wrapper section:nth-child(2) .knife_wrapper {
+        width: 50vw;
+        height: 25vw;
+        min-width: 300px;
+        min-height: 150px; }
+    .main_wrapper section:nth-child(3) .bbq_wrapper {
+      width: 40vw;
+      height: 30vw;
+      min-width: 270px;
+      min-height: 200px; }
+    .main_wrapper section:nth-child(4) {
+      justify-content: center; }
+      .main_wrapper section:nth-child(4) .snacks {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white; }
+        .main_wrapper section:nth-child(4) .snacks > img {
+          width: 30%; }
+    .main_wrapper section:nth-child(5) {
+      position: relative;
+      justify-content: flex-start; }
+      .main_wrapper section:nth-child(5) .lemon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20%; }
+      .main_wrapper section:nth-child(5) .stick_wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%; }
+      .main_wrapper section:nth-child(5) h2 {
+        margin-top: 20%; }
+    .main_wrapper section:nth-child(6) {
+      justify-content: center; }
+      .main_wrapper section:nth-child(6) .kitchen {
+        background-image: url("../resources/images/kitchen.jpg");
+        background-size: auto 100%; }
+
+@media screen and (max-width: 768px) {
+  .main_wrapper {
+    width: 100%; }
+    .main_wrapper h2 {
+      font-size: 1.5em; } }

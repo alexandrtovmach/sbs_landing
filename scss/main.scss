@@ -1,327 +1,138 @@
+@import './animations.scss';
+
 body {
     margin: 0;
+    background-color: #222;
 }
-
 .hide {
     display: none;
 }
-
-.animation {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-
-    .knife_wrapper {
-        position: relative;
-        width: 50vw;
-        height: 50vh;
-        overflow: hidden;
-
-        .knife {
-            width: 100%;
-            height: 100%;
-            box-shadow: 0 0 0 100px black;
-            background-image: url('../resources/images/knife.png');
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation: knifeRotate 1s infinite alternate;        
-        }
-        .room {
-            width: 100%;
-            height: 200%;
-            opacity: 0.2;
-            position: absolute;
-            left: -20%;
-            background-image: url('../resources/images/knife_view.jpg');
-            animation: knifeMirror 1s infinite alternate;
-        }
-    }
-    .bbq_wrapper {
-        position: relative;
-        width: 40vw;
-        height: 50vh;
-        overflow: hidden;
-        color: white;
-        .bbq {
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            background-image: url('../resources/images/bbq.png');
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-
-
-            .smoke_wrapper {
-                width: 97%;
-                height: 73%;
-                overflow: hidden;
-                .smoke {
-                    width: 10%;
-                    height: 1000%;
-                    float: right;
-                    padding-right: 4%;
-                    background-image: url('../resources/images/smoke.png');
-                    background-size: 100% auto;
-                    animation: smoke 50s infinite linear;
-                    opacity: 0;
-                    transition: 1s;
-                    
-                    &:hover {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
-    .stick_wrapper {
-        position: relative;
-        width: 50vw;
-        height: 50vh;
-        overflow: hidden;
-        color: white;
-        .stick {
-            width: auto;
-            height: 100%;
-
-            &.bluestick {
-                animation: stickRotateLeft 1s infinite alternate;
-            }
-
-            &.pinkstick {
-                animation: stickRotateRight 1s infinite alternate;
-            }
-        }
-    }
-    .whiskey_wrapper {
-        position: relative;
-        width: 50vw;
-        height: 80vh;
-        overflow: hidden;
-        color: white;
-        .icecube {
-            width: auto;
-            height: 15%;
-            display: block;
-            margin: auto;
-
-            &:nth-child(1) {
-                animation: fallIceCubeLeft 3s infinite ease-in alternate;
-            }
-
-            &:nth-child(2) {
-                animation: fallIceCubeRight 3s infinite ease-in alternate;
-            }
-        }
-        .glass {
-            width: 100%;
-            height: 60%;
-            background-size: auto 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation: glassSpil 3s infinite alternate;
-        }
-    }
-    .plate_wrapper {
-        position: relative;
-        width: 90vh;
-        height: 50vh;
-        overflow: hidden;
-        color: white;
-        .plate_crash_wrapper {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            animation: crashPlate 1s infinite ease-out alternate;
-            .platecrash {
-                position: absolute;
-    
-                &:nth-child(1) {
-                    width: 26%;
-                    height: auto;
-                    top: 7%;
-                    left: 26%;
-                    // animation: fallIceCubeLeft 3s infinite ease-in;
-                }
-    
-                &:nth-child(2) {
-                    width: 22%;
-                    height: auto;
-                    top: 16%;
-                    left: 38%;
-                    // animation: fallIceCubeRight 3s infinite ease-in;
-                }
-    
-                &:nth-child(3) {
-                    width: 20%;
-                    height: auto;
-                    top: 48%;
-                    left: 37%;
-                    // animation: fallIceCubeRight 3s infinite ease-in;
-                }
-    
-                &:nth-child(4) {
-                    width: 36%;
-                    height: auto;
-                    top: 49%;
-                    left: 18%;
-                    // animation: fallIceCubeRight 3s infinite ease-in;
-                }
-    
-                &:nth-child(5) {
-                    width: 20%;
-                    height: auto;
-                    top: 15%;
-                    left: 17%;
-                    // animation: fallIceCubeRight 3s infinite ease-in;
-                }
-            }
-        }
-        .plate {
-            width: auto;
-            height: 100%;
-            background-size: auto 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation: flyPlate 1s infinite ease-out alternate;
-        }
-    }
-}
-
-@keyframes knifeRotate {
-    from {
-        transform: rotateX(0) rotateY(0);
-    }
-    to {
-        transform: rotateX(20deg) rotateY(5deg);
-    }
-}
-
-@keyframes stickRotateLeft {
-    from {
-        transform: rotateZ(0);
-    }
-    to {
-        transform: rotateZ(50deg);
-    }
-}
-
-@keyframes stickRotateRight {
-    from {
-        transform: rotateZ(0);
-    }
-    to {
-        transform: rotateZ(-50deg);
-    }
-}
-
-@keyframes fallIceCubeLeft {
-    0% {
-        transform: translateX(-50%) translateY(150%);
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(30%) translateY(400%);
-        opacity: 0;
-    }
-}
-
-@keyframes fallIceCubeRight {
-    0% {
-        transform: translateX(0) translateY(0);
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-50%) translateY(300%);
-        opacity: 0;
-    }
-}
-
-@keyframes knifeMirror {
-    from {
-        transform: rotateZ(25deg) translateX(25px) translateY(-100%);
-    }
-    to {
-        transform: rotateZ(25deg) translateX(25px) translateY(0%);
-    }
-}
-
-@keyframes smoke {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(-50%);
-    }
-}
-
-@keyframes glassSpil {
-    0% {
-        background-image: url('../resources/images/whiskey1.png');
-    }
-    80% {
-        background-image: url('../resources/images/whiskey1.png');
-    }
-    100% {
-        background-image: url('../resources/images/whiskey2.png');
-    }
-}
-
-@keyframes flyPlate {
-    0% {
-        transform: translateX(50%) scale(1);
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    80% {
-        transform: translateX(20%) translateY(-5%) scale(0.77);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(20%) translateY(-5%) scale(0.77);
-        opacity: 0;
-    }
-}
-
-@keyframes crashPlate {
-    0% {
-        opacity: 0;
-    }
-    74% {
-        opacity: 0;
-    }
-    80% {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        opacity: 1;
-    }
-    100% {
-        width: 105%;
-        height: 120%;
-        margin: -5% 0 0 -2.5%;
-        opacity: 1;
-    }
-}
-
-
-
-
-
-
-
-
 .centerContent {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.main_wrapper {
+    margin: auto;
+    width: 60%;
+    box-shadow: 0 0 20px 5px black;
+    background-image: url('../resources/images/bg_desk.jpg');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    overflow: hidden;
+    color: white;
+
+    h1, h2, h3 {
+        font-family: sans-serif;
+        font-weight: 200;
+        letter-spacing: 0.3em;
+        line-height: 1.5;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-family: sans;
+    }
+
+    section {
+        padding: 5vh 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        .delim {
+            width: 100%;
+            height: 2vh;
+            background-image: url('../resources/images/delimiter.jpg');
+            background-size: auto 100%;
+        }
+        .delimiter_image {
+            width: 100%;
+            height: 50%;            
+        }
+
+        // &:nth-child(2n-1) {
+        //     background-color: rgba(200, 0, 0, 0.2);
+        // }
+        &:nth-child(1) {
+        }
+        &:nth-child(2) {
+            background-color: rgba(0,0,0,1);
+            box-shadow: 0 0 20px 2px black;
+            h2 {
+                width: 50%;
+            }
+            .knife_wrapper {
+                width: 50vw;
+                height: 25vw;
+                min-width: 300px;
+                min-height: 150px;
+            }
+        }
+        &:nth-child(3) {
+            .bbq_wrapper {
+                width: 40vw;
+                height: 30vw;
+                min-width: 270px;
+                min-height: 200px;
+            }
+        }
+        &:nth-child(4) {
+            justify-content: center;
+            .snacks {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: white;
+
+                >img {
+                    width: 30%;
+                }
+            }
+        }
+        &:nth-child(5) {
+            position: relative;
+            justify-content: flex-start;
+            .lemon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20%;
+            }
+            .stick_wrapper {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            h2 {
+                margin-top: 20%;
+            }
+        }
+        &:nth-child(6) {
+            justify-content: center;
+            .kitchen {
+                background-image: url('../resources/images/kitchen.jpg');
+                background-size: auto 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main_wrapper {
+        width: 100%;
+
+        h2 {
+            font-size: 1.5em;
+        }
+    }
 }
