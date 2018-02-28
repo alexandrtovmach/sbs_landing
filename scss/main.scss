@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    background-color: #222;
+    background-color: white;
 }
 .hide {
     display: none;
@@ -211,13 +211,19 @@ body {
                 right: 0;
                 width: 20%;
             }
-            .stick_text {
+            .stick_textWrapper {
                 width: 0;
                 overflow: hidden;
-                flex-direction: column;
                 transition: 2s;
+                .stick_text {
+                    min-width: 60vw;
+                    flex-direction: column;
+                }
                 &.startAnim {
                     width: 100%;
+                    .stick_text {
+                        margin-left: 0;
+                    }
                 }
             }
             .stick_wrapper {
@@ -337,6 +343,13 @@ body {
         }
         
         section {
+            &:nth-child(5) {
+                .stick_textWrapper {
+                    .stick_text {
+                        width: 100vw;
+                    }
+                }
+            }
             &:nth-child(6) {
                 .kitchen {
                     background-size: cover;

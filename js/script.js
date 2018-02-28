@@ -17,12 +17,18 @@ function init() {
         element: getBCL('stick_wrapper'),
         enter: function(direction) {
             getBCL('stick_wrapper').classList.add('startAnim')
+        },
+        exited: function(direction) {
+            getBCL('stick_wrapper').classList.remove('startAnim')
         }
     })
     new Waypoint.Inview({
-        element: getBCL('stick_text'),
+        element: getBCL('stick_textWrapper'),
         enter: function(direction) {
-            getBCL('stick_text').classList.add('startAnim')
+            getBCL('stick_textWrapper').classList.add('startAnim')
+        },
+        exited: function(direction) {
+            getBCL('stick_textWrapper').classList.remove('startAnim')
         }
     })
     new Waypoint.Inview({
@@ -31,8 +37,12 @@ function init() {
             getBCL('whiskey_wrapper').classList.add('startAnim')
         },
         exited: function(direction) {
-            getBCL('knife_wrapper').classList.remove('startAnim')
+            getBCL('whiskey_wrapper').classList.remove('startAnim')
         }
+    })
+
+    window.addEventListener('scroll', (event) => {
+        console.log(event)
     })
 
     setTimeout(plateAnimation, 2000)
