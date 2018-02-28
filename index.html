@@ -7,8 +7,9 @@
     <title>Meat</title>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/aos.css">
 </head>
-<body>
+<body onload="init()">
     <main class="main_wrapper">
         <section>
             <h2>CONTAIN YOUR EXCITEMENT</h2>
@@ -19,14 +20,14 @@
                 <img src="./resources/images/plate4.png" class="platecrash">
             </div>
         </section>
-        <section>
+        <section data-aos="fade-left">
             <h2>there are some walks you have to take alone</h2>
             <div class="knife_wrapper">
                 <div class="room"></div>
                 <div class="knife"></div>
             </div>
         </section>
-        <section>
+        <section data-aos="fade-right">
             <h2>INDULGE IN  YOUR FIVE SENSES</h2>
             <div class="bbq_wrapper">
                 <div class="bbq">
@@ -41,7 +42,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section  data-aos="flip-up">
             <div class="delim"></div>
             <div class="snacks delimiter_image">
                 <img src="./resources/images/snack1.png" alt="">
@@ -50,23 +51,25 @@
             </div>
             <div class="delim"></div>
         </section>
-        <section>
+        <section data-aos="fade-left">
             <img src="./resources/images/lemons.png" alt="" class="lemon">
-            <h2>TASTE THE EXPERIENCE</h2>
-            <p>Our philosophy dictates that the dining experience involve all five senses.</p>
+            <div class="stick_text centerContent">
+                <h2>TASTE THE EXPERIENCE</h2>
+                <p>Our philosophy dictates that the dining experience involve all five senses.</p>
+            </div>
             <div class="stick_wrapper centerContent">
                 <img src="./resources/images/stick1.png" class="stick bluestick">
                 <img src="./resources/images/stick2.png" class="stick pinkstick">
             </div>
         </section>
-        <section>
+        <section data-aos="flip-up">
             <div class="delim"></div>
             <div class="kitchen delimiter_image centerContent">
                 <h2>THE EXPERIENCE</h2>
             </div>
             <div class="delim"></div>
         </section>
-        <section>
+        <section data-aos="fade-right">
             <p>Explore texture, color, and ofcourse the ultimate tastes with our menu of the season. All the ingredients are fresh and carefully selected by our chefs. Enjoy an extraordinary dining experience.</p>
             <div class="whiskey_wrapper">
                 <img src="./resources/images/icecube1.png" class="icecube">
@@ -78,7 +81,7 @@
                 <p>We would like to immerse all our guests in an adventure that,aside from being delicious.</p>
             </div>
         </section>
-        <section>
+        <section data-aos="fade-up">
             <p>We offer a diverse range of steak & sushi coupled with different sauces.</p>
             <div class="dots">
                 <span>●</span>
@@ -140,5 +143,9 @@
             <img src="./resources/images/plate.png" class="plate">
         </div>
     </div> -->
+    <script src="js/waypoints.js"></script>
+    <script src="js/waypoints_inview.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
