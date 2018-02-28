@@ -25,8 +25,7 @@ body {
     color: white;
 
     h1, h2, h3 {
-        font-family: sans-serif;
-        font-weight: 200;
+        font-family: Montserrat, sans-serif;
         letter-spacing: 0.3em;
         line-height: 1.5;
         text-transform: uppercase;
@@ -34,13 +33,14 @@ body {
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     p {
-        font-family: sans;
+        font-family: 'Libre Baskerville', sans;
         text-align: center;
-        width: 50%;
+        line-height: 1.5;
+        width: 60%;
     }
 
     section {
@@ -59,13 +59,15 @@ body {
         }
         .delimiter_image {
             width: 100%;
-            height: 50%;            
+            height: 40%;            
         }
-
-        // &:nth-child(2n-1) {
-        //     background-color: rgba(200, 0, 0, 0.2);
-        // }
         &:nth-child(1) {
+            .plate_crash_wrapper {
+                width: 40vw;
+                height: 40vw;
+                min-width: 300px;
+                min-height: 150px;
+            }
         }
         &:nth-child(2) {
             background-color: rgba(0,0,0,1);
@@ -74,16 +76,16 @@ body {
                 width: 50%;
             }
             .knife_wrapper {
-                width: 50vw;
-                height: 25vw;
+                width: 40vw;
+                height: 20vw;
                 min-width: 300px;
                 min-height: 150px;
             }
         }
         &:nth-child(3) {
             .bbq_wrapper {
-                width: 40vw;
-                height: 30vw;
+                width: 35vw;
+                height: 25vw;
                 min-width: 270px;
                 min-height: 200px;
             }
@@ -97,7 +99,7 @@ body {
                 background-color: white;
 
                 >img {
-                    width: 30%;
+                    width: 20%;
                 }
             }
         }
@@ -123,7 +125,7 @@ body {
             justify-content: center;
             .kitchen {
                 background-image: url('../resources/images/kitchen.jpg');
-                background-size: auto 100%;
+                background-size: 100% auto;
             }
         }
         &:nth-child(7) {
@@ -137,7 +139,7 @@ body {
                 justify-content: center;
                 align-items: center;
             }
-            h2, p {
+            h2 {
                 width: 50%;
             }
         }
