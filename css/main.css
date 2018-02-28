@@ -245,7 +245,9 @@ body {
   .main_wrapper h2 {
     font-size: 1.5em; }
   .main_wrapper p {
-    font-family: sans; }
+    font-family: sans;
+    text-align: center;
+    width: 50%; }
   .main_wrapper section {
     padding: 5vh 0;
     height: 100vh;
@@ -304,6 +306,38 @@ body {
       .main_wrapper section:nth-child(6) .kitchen {
         background-image: url("../resources/images/kitchen.jpg");
         background-size: auto 100%; }
+    .main_wrapper section:nth-child(7) .whiskey_wrapper {
+      width: 50vw;
+      height: 40vw; }
+    .main_wrapper section:nth-child(7) .text_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    .main_wrapper section:nth-child(7) h2, .main_wrapper section:nth-child(7) p {
+      width: 50%; }
+    .main_wrapper section:nth-child(8) {
+      margin-top: 40vh;
+      height: 60vh;
+      background-color: white;
+      color: black; }
+      .main_wrapper section:nth-child(8) .button {
+        padding: 5px 10px;
+        text-transform: uppercase;
+        border: 2px solid black;
+        cursor: pointer;
+        transition: 0.5s;
+        font-family: sans-serif;
+        line-height: 1; }
+        .main_wrapper section:nth-child(8) .button:hover {
+          transform: scale(1.05); }
+      .main_wrapper section:nth-child(8) .dots {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 25%; }
+      .main_wrapper section:nth-child(8) h1 {
+        font-size: 3em; }
 
 @media screen and (max-width: 768px) {
   .main_wrapper {

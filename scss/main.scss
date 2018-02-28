@@ -39,6 +39,8 @@ body {
 
     p {
         font-family: sans;
+        text-align: center;
+        width: 50%;
     }
 
     section {
@@ -122,6 +124,49 @@ body {
             .kitchen {
                 background-image: url('../resources/images/kitchen.jpg');
                 background-size: auto 100%;
+            }
+        }
+        &:nth-child(7) {
+            .whiskey_wrapper {
+                width: 50vw;
+                height: 40vw;
+            }
+            .text_wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h2, p {
+                width: 50%;
+            }
+        }
+        &:nth-child(8) {
+            margin-top: 40vh;
+            height: 60vh;
+            background-color: white;
+            color: black;
+            .button {
+                padding: 5px 10px;
+                text-transform: uppercase;
+                border: 2px solid black;
+                cursor: pointer;
+                transition: 0.5s;
+                font-family: sans-serif;
+                line-height: 1;
+
+                &:hover {
+                    transform: scale(1.05)
+                }
+            }
+            .dots {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 25%;
+            }
+            h1 {
+                font-size: 3em;
             }
         }
     }
