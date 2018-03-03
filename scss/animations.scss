@@ -25,29 +25,21 @@
     }
 }
 
-@keyframes fallIceCubeLeft {
+@keyframes rotatingIceCubeLeft {
     0% {
-        transform: translateX(-50%) translateY(150%);
-    }
-    80% {
-        opacity: 1;
+        transform: rotateZ(0);
     }
     100% {
-        transform: translateX(30%) translateY(400%);
-        opacity: 0;
+        transform: rotateZ(360deg);
     }
 }
 
-@keyframes fallIceCubeRight {
+@keyframes rotatingIceCubeRight {
     0% {
-        transform: translateX(0) translateY(0);
-    }
-    80% {
-        opacity: 1;
+        transform: rotateZ(0);
     }
     100% {
-        transform: translateX(-50%) translateY(300%);
-        opacity: 0;
+        transform: rotateZ(-360deg);
     }
 }
 
@@ -71,9 +63,6 @@
 
 @keyframes glassSpil {
     0% {
-        background-image: url('../resources/images/whiskey1.png');
-    }
-    80% {
         background-image: url('../resources/images/whiskey1.png');
     }
     100% {
