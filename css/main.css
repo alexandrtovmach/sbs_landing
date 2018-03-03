@@ -89,20 +89,6 @@ body {
   justify-content: center;
   align-items: center; }
 
-.icecube_wrapper {
-  position: fixed;
-  top: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-  .icecube_wrapper .icecube {
-    width: 80px;
-    height: 80px; }
-    .icecube_wrapper .icecube:nth-child(1) {
-      animation: rotatingIceCubeLeft 5s linear forwards infinite; }
-    .icecube_wrapper .icecube:nth-child(2) {
-      animation: rotatingIceCubeRight 5s linear forwards infinite; }
-
 .main_wrapper {
   margin: auto;
   width: 60%;
@@ -283,28 +269,44 @@ body {
       .main_wrapper section:nth-child(6) .kitchen {
         background-image: url("../resources/images/kitchen.jpg");
         background-size: 100% auto; }
-    .main_wrapper section:nth-child(7) .whiskey_wrapper {
-      width: 300px;
-      height: 300px;
-      position: relative;
-      overflow: hidden;
-      color: white; }
-      .main_wrapper section:nth-child(7) .whiskey_wrapper.startAnim .glass {
-        animation: glassSpil 0.5s 1s forwards; }
-      .main_wrapper section:nth-child(7) .whiskey_wrapper .glass {
-        width: 100%;
-        height: 100%;
-        background-size: auto 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url("../resources/images/whiskey1.png"); }
-    .main_wrapper section:nth-child(7) .text_wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-    .main_wrapper section:nth-child(7) h2 {
-      width: 50%; }
+    .main_wrapper section:nth-child(7) {
+      justify-content: center; }
+      .main_wrapper section:nth-child(7) .whiskey_wrapper {
+        width: 300px;
+        height: 400px;
+        min-width: 300px;
+        min-height: 400px;
+        max-width: 300px;
+        max-height: 400px;
+        position: relative;
+        overflow: hidden;
+        color: white; }
+        .main_wrapper section:nth-child(7) .whiskey_wrapper .glass {
+          width: 100%;
+          height: 100%;
+          background-size: auto 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: 0.5s 0.6s;
+          background-image: url("../resources/images/whiskey1.png"); }
+        .main_wrapper section:nth-child(7) .whiskey_wrapper .icecube_wrapper {
+          position: absolute;
+          bottom: calc(100% + 500px);
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          z-index: 3;
+          transition: 0.6s ease-in; }
+          .main_wrapper section:nth-child(7) .whiskey_wrapper .icecube_wrapper .icecube {
+            width: 100px;
+            height: 100px; }
+      .main_wrapper section:nth-child(7) .text_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+      .main_wrapper section:nth-child(7) h2 {
+        width: 50%; }
     .main_wrapper section:nth-child(8) {
       margin-top: 40vh;
       height: 60vh;

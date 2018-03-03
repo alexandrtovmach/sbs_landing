@@ -22,18 +22,22 @@ function init() {
         element: getBCL('whiskey_wrapper'),
         handler: function(direction) {
             const ice = getBCL('icecube_wrapper');
-            const glass = getBCL('whiskey_wrapper');
-            if (ice.style.position) {
+            const glass = getBCL('glass');
+            if (glass.style.backgroundImage) {
+                glass.style = null;
+            } else {
+                glass.style.backgroundImage = "url('./resources/images/whiskey2.png')";
+            }
+    
+            if (ice.style.bottom) {
                 ice.style = null;
             } else {
-                ice.style.position = 'absolute';
-                ice.style.top = window.pageYOffset + ice.clientHeight/2 + 'px';
-                ice.style.transition = 'transform 1s ease-in, opacity 1s 1s';
-                ice.style.transform = 'translateY(' + (glass.offsetTop + glass.clientHeight/2 + 20*2 + ice.clientHeight) + 'px)';
-                ice.style.opacity = '0';
+                ice.style.bottom = `${glass.clientHeight*0.2}px`;
+                ice.style.opacity = '1';
+                setTimeout(() => {
+                    ice.style.opacity = '0';
+                }, 500)
             }
-            // ice.classList.toggle('startAnim');
-            glass.classList.toggle('startAnim')
         },
         offset: '75%'
     })
