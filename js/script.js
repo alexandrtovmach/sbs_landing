@@ -42,7 +42,7 @@ function init() {
         offset: '75%'
     })
 
-    setTimeout(plateAnimation, 2000)
+    window.addEventListener('scroll', plateAnimation)
 }
 
 function plateAnimation() {
@@ -51,6 +51,7 @@ function plateAnimation() {
     setTimeout(() => {
         plate.play();
     }, 400)
+    window.removeEventListener('scroll', plateAnimation)
 }
 
 function getBCL(cls) {

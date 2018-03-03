@@ -139,7 +139,7 @@ body {
         height: 150px;
         transition: transform 0.2s 0.5s linear, opacity 1s 1s ease-in; }
       .main_wrapper section:nth-child(1) .plate_crash_wrapper.startAnim {
-        top: 30%; }
+        top: 80%; }
         .main_wrapper section:nth-child(1) .plate_crash_wrapper.startAnim .platecrash:nth-child(1) {
           transform: translateY(20%);
           opacity: 0; }
