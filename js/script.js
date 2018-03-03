@@ -26,13 +26,13 @@ function init() {
             if (glass.style.backgroundImage) {
                 glass.style = null;
             } else {
-                glass.style.backgroundImage = "url('./resources/images/whiskey2.png')";
+                glass.style.backgroundImage = "url('./resources/images/whiskey3.png')";
             }
     
             if (ice.style.bottom) {
                 ice.style = null;
             } else {
-                ice.style.bottom = `${glass.clientHeight*0.2}px`;
+                ice.style.bottom = `${glass.clientHeight*0.3}px`;
                 ice.style.opacity = '1';
                 setTimeout(() => {
                     ice.style.opacity = '0';
