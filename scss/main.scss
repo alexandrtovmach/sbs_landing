@@ -99,14 +99,24 @@ body {
             }
         }
         &:nth-child(2) {
-            background-color: rgba(0,0,0,1);
-            box-shadow: 0 0 20px 2px black;
+            .block_knife {
+                flex-direction: column;
+                width: 100%;
+                height: calc(20vw + 2vh*2);
+                background-color: white;
+            }
+            // .block_knife {
+            //     flex-direction: column;
+            //     width: 100%;
+            //     height: calc(20vw + 2vh*2);
+            //     background-color: rgba(0,0,0,1);
+            // }
             h2 {
                 width: 50%;
             }
             .knife_wrapper {
                 width: 40vw;
-                height: 20vw;
+                height: 100%;
                 min-width: 300px;
                 min-height: 150px;
                 position: relative;
@@ -127,8 +137,10 @@ body {
                 .knife {
                     width: 100%;
                     height: 100%;
-                    box-shadow: 0 0 0 100px black;
-                    background-image: url('../resources/images/knife.png');
+                    box-shadow: 0 0 0 100px white;
+                    // box-shadow: 0 0 0 100px black;
+                    background-image: url('../resources/images/knife_white.png');
+                    // background-image: url('../resources/images/knife.png');
                     background-size: 100% 100%;
                     background-position: center;
                     background-repeat: no-repeat;     
