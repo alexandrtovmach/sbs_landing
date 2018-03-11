@@ -9,7 +9,7 @@ function init() {
         handler: function(direction) {
             getBCL('sticks').classList.toggle('startAnim')
         },
-        offset: '10%'
+        offset: '20%'
     })
     new Waypoint({
         element: getBCL('whiskey_wrapper'),
@@ -34,19 +34,13 @@ function init() {
         },
         offset: '75%'
     })
-
-    window.addEventListener('scroll', plateAnimation)
-}
-
-function plateAnimation() {
-    getBCL('plate_crash_wrapper').classList.add('startAnim');
-    let plate = new Audio('./resources/plate_break.mp3');
-    setTimeout(() => {
-        plate.play();
-    }, 400)
-    window.removeEventListener('scroll', plateAnimation)
 }
 
 function getBCL(cls) {
     return document.getElementsByClassName(cls)[0]
+}
+
+function overlay(event) {
+	el = document.getElementById("overlay");
+	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
 }
