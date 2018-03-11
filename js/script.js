@@ -5,18 +5,11 @@ function init() {
     });
 
     new Waypoint({
-        element: getBCL('knife_wrapper'),
-        handler: function(direction) {
-            getBCL('knife_wrapper').classList.toggle('startAnim')
-        },
-        offset: '75%'
-    })
-    new Waypoint({
         element: getBCL('sticks'),
         handler: function(direction) {
             getBCL('sticks').classList.toggle('startAnim')
         },
-        offset: '50%'
+        offset: '10%'
     })
     new Waypoint({
         element: getBCL('whiskey_wrapper'),
@@ -32,7 +25,7 @@ function init() {
             if (ice.style.bottom) {
                 ice.style = null;
             } else {
-                ice.style.bottom = `${glass.clientHeight*0.3}px`;
+                ice.style.bottom = `${glass.clientHeight*0.4}px`;
                 ice.style.opacity = '1';
                 setTimeout(() => {
                     ice.style.opacity = '0';

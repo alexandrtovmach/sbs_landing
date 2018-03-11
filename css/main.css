@@ -113,7 +113,7 @@ body {
     width: 60%; }
   .main_wrapper section {
     padding: 5vh 0;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -125,70 +125,20 @@ body {
       background-size: auto 100%; }
     .main_wrapper section .delimiter_image {
       width: 100%;
-      height: 40%; }
-    .main_wrapper section:nth-child(1) .plate_crash_wrapper {
-      position: absolute;
-      top: -200vh;
-      width: 300px;
-      height: 150px;
-      transition: 0.5s linear;
-      overflow: hidden; }
-      .main_wrapper section:nth-child(1) .plate_crash_wrapper .platecrash {
+      height: 60%; }
+    .main_wrapper section:nth-child(1) {
+      position: relative;
+      height: 50vh; }
+      .main_wrapper section:nth-child(1) .platecrash {
         position: absolute;
-        width: 300px;
-        height: 150px;
-        transition: transform 0.2s 0.5s linear, opacity 1s 1s ease-in; }
-      .main_wrapper section:nth-child(1) .plate_crash_wrapper.startAnim {
-        top: 80%; }
-        .main_wrapper section:nth-child(1) .plate_crash_wrapper.startAnim .platecrash:nth-child(1) {
-          transform: translateY(20%);
-          opacity: 0; }
-        .main_wrapper section:nth-child(1) .plate_crash_wrapper.startAnim .platecrash:nth-child(2) {
-          transform: translateX(-5%);
-          opacity: 0; }
-        .main_wrapper section:nth-child(1) .plate_crash_wrapper.startAnim .platecrash:nth-child(3) {
-          transform: translateX(20%);
-          opacity: 0; }
-        .main_wrapper section:nth-child(1) .plate_crash_wrapper.startAnim .platecrash:nth-child(4) {
-          transform: translateY(-20%);
-          opacity: 0; }
+        top: 0;
+        width: 100%;
+        height: auto; }
     .main_wrapper section:nth-child(2) .block_knife {
-      flex-direction: column;
       width: 100%;
-      height: calc(20vw + 2vh*2);
-      background-color: white; }
+      height: auto; }
     .main_wrapper section:nth-child(2) h2 {
       width: 50%; }
-    .main_wrapper section:nth-child(2) .knife_wrapper {
-      width: 40vw;
-      height: 100%;
-      min-width: 300px;
-      min-height: 150px;
-      position: relative;
-      overflow: hidden;
-      transition: 0.5s;
-      opacity: 0; }
-      .main_wrapper section:nth-child(2) .knife_wrapper.startAnim {
-        opacity: 1; }
-        .main_wrapper section:nth-child(2) .knife_wrapper.startAnim .knife {
-          animation: knifeRotate 1s forwards; }
-        .main_wrapper section:nth-child(2) .knife_wrapper.startAnim .room {
-          animation: knifeMirror 1s forwards; }
-      .main_wrapper section:nth-child(2) .knife_wrapper .knife {
-        width: 100%;
-        height: 100%;
-        box-shadow: 0 0 0 100px white;
-        background-image: url("../resources/images/knife_white.png");
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat; }
-      .main_wrapper section:nth-child(2) .knife_wrapper .room {
-        width: 100%;
-        height: 200%;
-        opacity: 0.2;
-        position: absolute;
-        left: -20%;
-        background-image: url("../resources/images/knife_view.jpg"); }
     .main_wrapper section:nth-child(3) .bbq_wrapper {
       width: 35vw;
       height: 25vw;
@@ -209,8 +159,9 @@ body {
         background-repeat: no-repeat; }
         .main_wrapper section:nth-child(3) .bbq_wrapper .bbq .smoke_wrapper {
           width: 97%;
-          height: 73%;
-          overflow: hidden; }
+          height: 61%;
+          overflow: hidden;
+          margin-top: 9%; }
           .main_wrapper section:nth-child(3) .bbq_wrapper .bbq .smoke_wrapper .smoke {
             width: 10%;
             height: 1000%;
@@ -231,7 +182,7 @@ body {
         align-items: center;
         background-color: white; }
         .main_wrapper section:nth-child(4) .snacks > img {
-          width: 20%; }
+          width: 25%; }
     .main_wrapper section:nth-child(5) {
       position: relative;
       justify-content: center; }
@@ -239,7 +190,7 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        width: 20%; }
+        width: 30%; }
       .main_wrapper section:nth-child(5).sticks .stick_textWrapper {
         width: 0;
         overflow: hidden;
@@ -303,6 +254,10 @@ body {
           .main_wrapper section:nth-child(7) .whiskey_wrapper .icecube_wrapper .icecube {
             width: 100px;
             height: 100px; }
+            .main_wrapper section:nth-child(7) .whiskey_wrapper .icecube_wrapper .icecube:nth-child(1) {
+              transform: rotateZ(-55deg) translateY(30%); }
+            .main_wrapper section:nth-child(7) .whiskey_wrapper .icecube_wrapper .icecube:nth-child(2) {
+              transform: rotateZ(-1deg) translateX(-11%) translateY(7%); }
       .main_wrapper section:nth-child(7) .text_wrapper {
         display: flex;
         flex-direction: column;

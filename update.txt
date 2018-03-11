@@ -1,0 +1,10 @@
+1- fix the spaces as shown in the nes psd
++ 2- delay the chopsticks writing. 
++ 3- The ice cubes have to drop in the glasses and stay at the top of 2 glasses so it looks real
++ 4- make the plates that is in the white background bigger
++ 5- put the broken plate over the writing as shown in the design
++ 6- remove the black background of the knife, and put it without animation.
++ 7- They sent you code of the left and right color background instead of white.
++ 8- bbq smoke is cropped on the top. Make it till the end.
+
++ 5 ==> the broken plate not animated.. just leave it over the design
